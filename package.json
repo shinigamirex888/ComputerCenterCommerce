@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/shinigamirex888/ComputerCenterCommerce#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "concurrently": "^6.2.0",
     "dotenv": "^10.0.0",
