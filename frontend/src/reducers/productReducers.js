@@ -24,6 +24,7 @@ export const productListReducer=(state={products:[]},action)=>{
 } 
 
 
+
 //single product reducer
 
 export const productDetailsReducer=(state={product:{reviews:[]}},action)=>{
@@ -37,4 +38,6 @@ export const productDetailsReducer=(state={product:{reviews:[]}},action)=>{
         default:
             return state    
     }
-}
+} 
+
+
