@@ -8,10 +8,23 @@ import CheckoutSteps from "../components/CheckoutSteps";
 const PlaceOrderScreen = () => {
   const cart = useSelector((state) => state.cart);
 
-  const placeOrderHandler =() => {
-      console.log('order')
-  }
+  //Calculate Prices
+  cart.itemsPrice = cart.cartItems.reduce(
+    (acc, item) => acc + item.price * item.qty,
+    0
+  );
 
+  cart.shippingPrice = cart.itemsPrice > 100 ? 0 : 100;
+
+  cart.taxPrice = Number((0.15 * cart.itemsPrice).toFixed(2));
+
+  cart.totalPrice = Number(
+    (cart.itemsPrice + cart.shippingPrice + cart.taxPrice).toFixed(2)
+  );
+
+  const placeOrderHandler = () => {
+    console.log("order");
+  };
 
   return (
     <>
@@ -110,7 +123,9 @@ const PlaceOrderScreen = () => {
                   className="btn-block"
                   disabled={cart.cartItems === 0}
                   onClick={placeOrderHandler}
-                >Place Order</Button>
+                >
+                  Place Order
+                </Button>
               </ListGroup.Item>
             </ListGroup>
           </Card>
