@@ -1,11 +1,6 @@
 import asyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
 
-
-
-
-
-
 // POST /create new order/api/orders
 const addOrderItems = asyncHandler(async (req, res) => {
   const {
@@ -40,10 +35,6 @@ const addOrderItems = asyncHandler(async (req, res) => {
   }
 });
 
-
-
-
-
 // GET /Get order by ID /api/orders/:id
 const getOrderById = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id).populate(
@@ -59,24 +50,19 @@ const getOrderById = asyncHandler(async (req, res) => {
   }
 });
 
-
-
-
-
 // GET /Update order to paid /api/orders/:id/pay
 const updateOrderToPaid = asyncHandler(async (req, res) => {
-  const order = await Order.findById(req.params.id)
-    
+  const order = await Order.findById(req.params.id);
 
   if (order) {
     order.isPaid = true;
-    order.paidAt=Date.now()
-    order.paymentResult={
-      id:req.body.id,
-      status:req.body.status,
-      update_time:req.body.update_time,
-      email_address:req.body.payer.email_address,
-    }
+    order.paidAt = Date.now();
+    order.paymentResult = {
+      id: req.body.id,
+      status: req.body.status,
+      update_time: req.body.update_time,
+      email_address: req.body.payer.email_address,
+    };
 
     const updatedOrder = await order.save();
     res.json(updatedOrder);
@@ -86,25 +72,37 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
   }
 });
 
-
-
-
-
 // GET /get logged in user orders /api/orders/myorders
 const getMyOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find({user: req.user._id})
-  res.json(orders);  
- 
+  const orders = await Order.find({ user: req.user._id });
+  res.json(orders);
 });
-
-
-
-
 
 // GET /get all orders /api/admin/orders/
 const getOrders = asyncHandler(async (req, res) => {
   const orders = await Order.find({}).populate("user", "id name");
-  res.json(orders);  
-
+  res.json(orders);
 });
-export { addOrderItems,getOrderById,updateOrderToPaid,getMyOrders,getOrders };
+
+// GET /Update order to delivered /api/orders/:id/deliver private/Admin
+const updateOrderToDelivered = asyncHandler(async (req, res) => {
+  const order = await Order.findById(req.params.id);
+  if (order) {
+    order.isDelivered = true;
+    order.deliveredAt = Date.now();
+    const updatedOrder = await order.save();
+    res.json(updatedOrder);
+  } else {
+    res.status(404);
+    throw new Error("Order not found");
+  }
+});
+
+export {
+  addOrderItems,
+  getOrderById,
+  updateOrderToPaid,
+  getMyOrders,
+  getOrders,
+  updateOrderToDelivered,
+};
