@@ -1,6 +1,11 @@
 import asyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
 
+
+
+
+
+
 // POST /create new order/api/orders
 const addOrderItems = asyncHandler(async (req, res) => {
   const {
@@ -35,6 +40,10 @@ const addOrderItems = asyncHandler(async (req, res) => {
   }
 });
 
+
+
+
+
 // GET /Get order by ID /api/orders/:id
 const getOrderById = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id).populate(
@@ -49,6 +58,8 @@ const getOrderById = asyncHandler(async (req, res) => {
     throw new Error("Order not found");
   }
 });
+
+
 
 
 
@@ -77,12 +88,23 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
 
 
 
+
+
 // GET /get logged in user orders /api/orders/myorders
 const getMyOrders = asyncHandler(async (req, res) => {
   const orders = await Order.find({user: req.user._id})
   res.json(orders);  
-
-  
+ 
 });
 
-export { addOrderItems,getOrderById,updateOrderToPaid,getMyOrders };
+
+
+
+
+// GET /get all orders /api/admin/orders/
+const getOrders = asyncHandler(async (req, res) => {
+  const orders = await Order.find({}).populate("user", "id name");
+  res.json(orders);  
+
+});
+export { addOrderItems,getOrderById,updateOrderToPaid,getMyOrders,getOrders };
