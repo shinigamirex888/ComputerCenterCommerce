@@ -1,6 +1,11 @@
 import asyncHandler from "express-async-handler";
 import Product from "../models/productModel.js";
 
+
+
+
+
+
 // GET /products
 const getProducts = asyncHandler(async (req, res) => {
   const pageSize= 8 
@@ -18,6 +23,11 @@ const getProducts = asyncHandler(async (req, res) => {
   res.json({products,page,pages:Math.ceil(count/pageSize)});
 });
 
+
+
+
+
+
 // GET /products/:id
 const getProductById = asyncHandler(async (req, res) => {
   const product = await Product.findById(req.params.id);
@@ -29,6 +39,11 @@ const getProductById = asyncHandler(async (req, res) => {
     throw new Error(" Product Not Found");
   }
 });
+
+
+
+
+
 
 // Delete /products/:id
 const deleteProduct = asyncHandler(async (req, res) => {
@@ -42,6 +57,10 @@ const deleteProduct = asyncHandler(async (req, res) => {
     throw new Error(" Product Not Found");
   }
 });
+
+
+
+
 
 // Createproduct/POST /api/products/private,admin
 const createProduct = asyncHandler(async (req, res) => {
@@ -60,6 +79,10 @@ const createProduct = asyncHandler(async (req, res) => {
   const createdProduct = await product.save();
   res.status(201).json(createdProduct);
 });
+
+
+
+
 
 // Updateproduct/PUT /api/products/:id/private,admin
 const updateProduct = asyncHandler(async (req, res) => {
@@ -94,6 +117,10 @@ const updateProduct = asyncHandler(async (req, res) => {
   }
 });
 
+
+
+
+
 // Create new review/POST /api/products/:id/reviews,    private
 const createProductReview = asyncHandler(async (req, res) => {
   const { rating, comment } = req.body;
@@ -125,11 +152,23 @@ const createProductReview = asyncHandler(async (req, res) => {
   }
 });
 
+
+
+
+
+// Get top rated products/GET /api/products/top,    public
+const getTopProducts = asyncHandler(async (req, res) => {
+  const products = await Product.find({}).limit(5).sort({ rating: -1 });
+  res.json(products);
+
+});
+
 export {
   getProducts,
   getProductById,
   deleteProduct,
   updateProduct,
   createProduct,
-  createProductReview
+  createProductReview,
+  getTopProducts,
 };
