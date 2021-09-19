@@ -20,7 +20,7 @@ function Footer() {
                                 <div className="cta-text">
                                
                                     <h4>Find us</h4>
-                                    <span>D.B Road,Near Alok Paneer, Saharsa</span>
+                                    <span>1010 Avenue, sw 54321, Delhi</span>
                                 </div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@ function Footer() {
                                 <i className="fa fa-phone"></i>
                                 <div className="cta-text">
                                     <h4>Call us</h4>
-                                    <span>7979734750</span>
+                                    <span>123456789</span>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@ function Footer() {
                                 <i className="fa fa-envelope-open"></i>
                                 <div className="cta-text">
                                     <h4>Mail us</h4>
-                                    <span>computercentresaharsa@rediffmail.com</span>
+                                    <span>subhamy142@gmail.com</span>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ function Footer() {
                                 </div>
                                 <div className="footer-text">
                                     <p>
-                                        Get high Quality,Authentic Laptops right at your door from US...
+                                        Get high Quality,Official Mangas right at your door from OTAKU
                                     </p>
                                 </div>
                                 <div className="footer-social-icon">
@@ -128,7 +128,7 @@ function Footer() {
                         <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                             <div className="copyright-text">
                                 <p>
-                                    &copy; Computer Centre | All Right Reserved |
+                                    &copy; Otaku | All Right Reserved |
                                     Terms Of Service | Privacy
                                 </p>
                             </div>
