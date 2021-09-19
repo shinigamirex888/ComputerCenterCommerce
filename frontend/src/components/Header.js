@@ -28,7 +28,7 @@ const Header = () => {
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
-         <h4>[̲̅C][̲̅o][̲̅m][̲̅p][̲̅u][̲̅t][̲̅e][̲̅r] [̲̅C][̲̅e][̲̅n][̲̅t][̲̅r][̲̅e]</h4>
+         <h4>[̲̅C][̲̅o][̲̅m][̲̅p]</h4>
            
             </Navbar.Brand>
           </LinkContainer>
