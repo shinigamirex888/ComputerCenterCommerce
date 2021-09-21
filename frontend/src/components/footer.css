@@ -3,14 +3,14 @@ ul {
     padding: 0px;
 }
 .footer-section {
-    background: #332929;
+    background: #485785;
     position: relative;
 }
 .footer-cta {
-    border-bottom: 1px solid #373636;
+    border-bottom: 1px solid #151E3D;
 }
 .single-cta i {
-    color: #ff5e14;
+    color: #241571;
     font-size: 30px;
     float: left;
     margin-top: 8px;
@@ -26,7 +26,7 @@ ul {
     margin-bottom: 2px;
 }
 .cta-text span {
-    color: #757575;
+    color: #151E3D;
     font-size: 15px;
 }
 .footer-content {
@@ -48,16 +48,16 @@ ul {
 
 }
 .footer-logo img {
-width: 129px;
+width: 75px;
 }
 .footer-text p {
     margin-bottom: 14px;
     font-size: 14px;
-    color: #7e7e7e;
+    color: #151E3D;
     line-height: 28px;
 }
 .footer-social-icon span {
-    color: #fff;
+    color: #241571;
     display: block;
     font-size: 20px;
     font-weight: 700;
@@ -65,7 +65,7 @@ width: 129px;
     margin-bottom: 20px;
 }
 .footer-social-icon a {
-    color: #fff;
+    color: #241571;
     font-size: 16px;
     margin-right: 15px;
 }
@@ -99,7 +99,7 @@ width: 129px;
     bottom: 6px;
     height: 2px;
     width: 76px;
-    background: #ff5e14;
+    background: #241571;
 }
 .footer-widget ul li {
     display: inline-block;
@@ -108,10 +108,10 @@ width: 129px;
     margin-bottom: 12px;
 }
 .footer-widget ul li a:hover {
-    color: #ff5e14;
+    color: #241571;
 }
 .footer-widget ul li a {
-    color: #878787;
+    color: #151E3D;
     text-transform: capitalize;
 }
 .subscribe-form {
@@ -122,8 +122,8 @@ width: 129px;
   
         width: 100%;
         padding: 6px 15px;
-        background: #2e2e2e;
-        border: 1px solid #2e2e2e;
+        background: #151E3D;
+        border: 1px solid #151E3D;
         color: #fff;
         margin-bottom: 13px;
     
@@ -131,9 +131,9 @@ width: 129px;
 .subscribe-form button {
     position: absolute;
     right: 0;
-    background: #ff5e14;
+    background: #241571;
     padding: 4px 16px;
-    border: 1px solid #ff5e14;
+    border: 1px solid #241571;
     top: 0;
 }
 .subscribe-form button i {
@@ -142,7 +142,7 @@ width: 129px;
     transform: rotate(-6deg);
 }
 .copyright-area {
-    background: #202020;
+    background: #151E3D;
     padding: 15px 0;
 }
 .copyright-text p {
@@ -151,14 +151,14 @@ width: 129px;
     color: #878787;
 }
 .copyright-text p a {
-    color: #ff5e14;
+    color: #241571;
 }
 .footer-menu li {
     display: inline-block;
     margin-left: 20px;
 }
 .footer-menu li:hover a {
-    color: #ff5e14;
+    color: #241571;
 }
 .footer-menu li a {
     font-size: 14px;
