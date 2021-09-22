@@ -109,7 +109,7 @@ const CartScreen = ({ match, location, history }) => {
         </Card>
       </Col>
     </Row>
-    <img src = {Cart} className="cart-img"/>
+    {/* <img src = {Cart} className="cart-img"/> */}
     </>
   )
 }
