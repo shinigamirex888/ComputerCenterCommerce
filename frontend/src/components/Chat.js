@@ -29,7 +29,7 @@ const theme = {
 const steps = [
   {
     id: 'intro',
-    message: 'Hey Anime Fan 😄😄!! How can I help you?😇',
+    message: 'Hey There 😄😄!! How can I help you?😇',
      trigger:2
   },
   {
@@ -43,16 +43,16 @@ const steps = [
   },
   {
     id: 'sg',
-    message: ' Whick type of animes do you prefer? 🤔',
+    message: ' Whick type of laptops do you prefer? 🤔',
     trigger: 'sg2',
   },
   {
     id: 'sg2',
    
     options: [
-      { value: 1, label: 'Shoenen 💥', trigger: 'Shoenen' },
-      { value: 2, label: 'funny/action😵', trigger: 'funny' },
-      { value: 3, label: 'Surprise Me 😲', trigger: 'surprise' },
+      { value: 1, label: 'Gaming 💥', trigger: 'Shoenen' },
+      { value: 2, label: 'Normal😵', trigger: 'funny' },
+      { value: 3, label: 'Macbook 😲', trigger: 'surprise' },
     ],
   },
   {
@@ -86,7 +86,7 @@ const steps = [
     id: 'c22',
     options: [
       { value: 1, label: 'Yeah I would prefer more option 😄', trigger: 'funny2' },
-      { value: 2, label: 'No. Arigato!😃 ', trigger:'Arigato' },
+      { value: 2, label: 'No. Thanks!😃 ', trigger:'Arigato' },
     ],
   },
   {
@@ -105,7 +105,7 @@ const steps = [
     id: 'c2',
     options: [
       { value: 1, label: 'Yeah I would prefer more option 🙃', trigger: 'Shoenen2' },
-      { value: 2, label: 'No. Arigato! 😅 ', trigger:'Arigato' },
+      { value: 2, label: 'No. Thanks! 😅 ', trigger:'Arigato' },
     ],
   },
   {
@@ -220,7 +220,7 @@ class Chat extends Component {
     return (
       <ThemeProvider theme={theme}>
       <ChatBot
-      headerTitle="I'm Animax 🤖"
+      headerTitle="I'm Cera 🤖"
       
       steps={steps} 
       {...config}
