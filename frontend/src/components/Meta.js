@@ -12,9 +12,9 @@ const Meta = ({ title, description, keywords }) => {
 }
 
 Meta.defaultProps = {
-  title: 'Welcome To Otaku',
-  description: 'We sell the best Manga for minimal price',
-  keywords: 'anime, buy manga, cheap manga',
+  title: 'Welcome',
+  description: 'We sell Authentic products at best price',
+  keywords: 'Laptops, buy Laptops, cheap Laptops',
 }
 
 export default Meta
