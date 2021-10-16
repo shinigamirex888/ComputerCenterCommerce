@@ -1,58 +1,67 @@
-import React from "react";
-import {Route} from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { LinkContainer } from "react-router-bootstrap";
-import { Container, Navbar, Nav,NavDropdown } from "react-bootstrap";
-import SearchBox from "./SearchBox"
-import {logout} from "../actions/userActions"
-
+import React from 'react'
+import { Route } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { LinkContainer } from 'react-router-bootstrap'
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
+import SearchBox from './SearchBox'
+//import GoogleAuth from './googleAuth'
+import { logout } from '../actions/userActions'
+import Logo from '../pics/logo.png'
 
 const Header = () => {
+  const dispatch = useDispatch()
 
-  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
 
-
-  const userLogin=useSelector(state=>state.userLogin)
-  const {userInfo}=userLogin
-
-  const logoutHandler=()=>{
+  const logoutHandler = () => {
     dispatch(logout())
   }
-
+  const navDropdownAdmin = (<i class="fas fa-user-shield">  Admin</i>)
+  let demo =""
+  if(userInfo){
+     demo = (<i class="fas fa-user"> {userInfo.name}</i>)
+  }
   return (
-    <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+    <header  style={{marginBottom:"44.5px"}}>
+      <Navbar bg='light' variant='light' expand='lg' collapseOnSelect fixed="top" >
         <Container>
-          <LinkContainer to="/">
-            <Navbar.Brand>Computer Center</Navbar.Brand>
+          <LinkContainer to='/'>
+            <Navbar.Brand>
+         <h4>𝕮𝖔𝖒𝖕𝖚𝖙𝖊𝖗 𝕮𝖊𝖓𝖙𝖗𝖊</h4>
+           
+            </Navbar.Brand>
           </LinkContainer>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Route render={({history})=> <SearchBox history={history} />} />            
-            <Nav className="ml-auto">
-              <LinkContainer to="/cart">
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+          <Route render={({ history }) => <SearchBox history={history} />} />
+          {/* <GoogleAuth/> */}
+            <Nav className='ml-auto'>
+              <LinkContainer to='/cart'  style={{ marginLeft: "20px" }}>
                 <Nav.Link>
-                  <i className="fas fa-shopping-cart"></i> Cart
+                  <i className='fas fa-shopping-cart'></i> Cart
                 </Nav.Link>
               </LinkContainer>
-              {userInfo ?(
-                <NavDropdown title={userInfo.name} id='username'>
-                  <LinkContainer to='/profile'>
-                    <NavDropdown.Item>
-                      Profile
-                    </NavDropdown.Item>
+              {userInfo ? (           
+                <NavDropdown title={demo} id='username'>
+                  <LinkContainer to='/profile' style={{ marginLeft: "20px" }}>
+                    <NavDropdown.Item><i class="fas fa-user-edit"></i>  Profile</NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Item onClick={logoutHandler}>
-                     Logout
+                  <i class="fas fa-sign-out-alt"></i>  Logout
                   </NavDropdown.Item>
                 </NavDropdown>
-              ):(<LinkContainer to="/login">
-              <Nav.Link>
-                <i className="fas fa-user"></i>Sign In
-              </Nav.Link>
-            </LinkContainer> )}
+               
+              ) : (
+                <LinkContainer to='/login'  style={{ marginLeft: "20px" }}>
+                  <Nav.Link>
+                  
+                    <i className='fas fa-user'></i> Sign In
+                  </Nav.Link>
+                </LinkContainer>
+              )}
                {userInfo && userInfo.isAdmin && (
-                <NavDropdown title='Admin' id='adminmenu'>
+                <NavDropdown title={navDropdownAdmin} id='adminmenu'>
                   <LinkContainer to='/admin/userlist'>
                     <NavDropdown.Item><i class="fas fa-users"></i> Users</NavDropdown.Item>
                   </LinkContainer>
@@ -69,7 +78,7 @@ const Header = () => {
         </Container>
       </Navbar>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
