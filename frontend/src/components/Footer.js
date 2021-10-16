@@ -38,7 +38,7 @@ function Footer() {
                                 <i className="fa fa-envelope-open"></i>
                                 <div className="cta-text">
                                     <h4>Mail us</h4>
-                                    <span>subhamy142@gmail.com</span>
+                                    <span>snehilsneh888@gmail.com</span>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ function Footer() {
                                 </div>
                                 <div className="footer-text">
                                     <p>
-                                        Get high Quality,Official Mangas right at your door from OTAKU
+                                        Get high Quality,Original Laptops right at your door from us
                                     </p>
                                 </div>
                                 <div className="footer-social-icon">
@@ -128,7 +128,7 @@ function Footer() {
                         <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                             <div className="copyright-text">
                                 <p>
-                                    &copy; Otaku | All Right Reserved |
+                                    &copy; Computre Centre | All Right Reserved |
                                     Terms Of Service | Privacy
                                 </p>
                             </div>
