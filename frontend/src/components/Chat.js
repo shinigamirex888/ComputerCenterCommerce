@@ -58,14 +58,14 @@ const steps = [
   {
     id: 'surprise',
     component: (
-      <div  style={{color:"black"}} className="div-text"> How about <a style ={{color:"red"}} href="/product/6085b506c2c5ae17c4aefd6b" >  JoJo’s Bizarre Adventure</a> </div>
+      <div  style={{color:"black"}} className="div-text"> How about <a style ={{color:"red"}} href="/product/616a72dd04019c3b8867f3be" >  Apple MacBook pro M1</a> </div>
     ),
     trigger: 'wnm2',
   },
   {
     id: 'Shoenen',
     component: (
-      <div  style={{color:"black"}} className="div-text"> My recommendations are <a style ={{color:"red"}} href="/product/6085b2fac2c5ae17c4aefd67" >  Jujutsu Kaisen</a> or <a style ={{color:"red"}} href="/product/6085b560c2c5ae17c4aefd6c">Demon Slayer: Kimetsu no Yaiba</a>. </div>
+      <div  style={{color:"black"}} className="div-text"> My recommendations are <a style ={{color:"red"}} href="/product/616a6af0ced2540db4190441" >  ASUS TUF Gaming Laptop</a> or <a style ={{color:"red"}} href="/product/616a6beeced2540db4190453">MSI GF65 Thin Core i7</a>. </div>
     ),
     trigger: 'wnm'
   },
@@ -73,7 +73,7 @@ const steps = [
   {
     id: 'funny',
     component: (
-      <div  style={{color:"black"}} className="div-text"> My recommendations are <a style ={{color:"red"}} href="/product/6085a3a4438e33313815dd6f" >  Fullmetal Alchemist: Brotherhood</a> or <a style ={{color:"red"}} href="/product/6085b3c5c2c5ae17c4aefd68">The God Of High School</a>. </div>
+      <div  style={{color:"black"}} className="div-text"> My recommendations are <a style ={{color:"red"}} href="/product/616a65f8ced2540db41903ec" >  HP pavilion Ryzen-5</a> or <a style ={{color:"red"}} href="/product/616a693bced2540db419041d">Lenovo Legion 5 Core i7</a>. </div>
     ),
     trigger: 'wnm2'
   },
@@ -92,7 +92,7 @@ const steps = [
   {
     id: 'funny2',
     component: (
-      <div> My recommendations are <a style ={{color:"red"}} href="/product/6085b5d4c2c5ae17c4aefd6d">Assassination Classroom</a> or <a style ={{color:"red"}} href="/product/6085b796c2c5ae17c4aefd72">Dr. Stone</a> </div>
+      <div> My recommendations are <a style ={{color:"red"}} href="/product/616a699fced2540db4190426">Lenovo Ideapad</a> or <a style ={{color:"red"}} href="/product/616a6815ced2540db419040b">HP 14s Core i5 </a> </div>
     ),
     trigger: 'wnm'
   },
@@ -117,7 +117,7 @@ const steps = [
   {
     id: 'Arigato-2',
     component: (
-      <div>do itashimashite(Welcome)</div>
+      <div>Welcome</div>
     ),
     
     end :true,
@@ -125,58 +125,57 @@ const steps = [
   {
     id: 'Shoenen2',
     component: (
-      <div> I recommend you <a style ={{color:"red"}} href="/product/6085b3fac2c5ae17c4aefd69">One Piece</a> or <a style ={{color:"red"}} href="/product/6085a41f438e33313815dd71">Naruto: Shippûden</a> </div>
+      <div> I recommend you <a style ={{color:"red"}} href="/product/616a66f5ced2540db41903f9">Hp pavilion 10-gen i5</a>  </div>
     ),
     trigger: 'wnm'
   },
   {
     id: 'persueade',
-    message: 'OK, Have fun ​😁​​😁​    Hey do you know about the guy whose deafeats every villan in just ONE punch? ',
-    trigger: 'p2',
+    message: 'OK, Have fun ​😁​​😁​ ',
   },
-  {
-    id: 'p2',
-    options: [
-      { value: 1, label: 'No 😬!!', trigger: 'opm' },
-      { value: 2, label: 'Yeah I love that anime 😋 ', trigger: 'step-2' },
-    ],
-  },
-  {
-    id: 'step-2',
-    message: 'I can sugeest you more animes like that 😋',
-    trigger: 'step-3',
-  },
-  {
-    id: 'step-3',
-    options: [
-      { value: 1, label: 'Yeah. Please do 😅', trigger: 'Dbzs' },
-      { value: 2, label: 'I wanna try something new 😑', trigger: 'food' },
-    ],
-  },
-  {
-    id: 'Dbzs',
-    component: (
-      <div> Here is one. How the protagnist get god-like powers "Dragon Ball Z Super". PS we have it om Blu-Ray   <a href="/product/6085a666438e33313815dd74">Have a look</a> </div>
-    ),
-    asMessage: true,
-    end: true,
-  },
-  {
-    id: 'food',
-    component: (
-      <div> How about anime on FOOD "Food Wars!". PS we have it om Blu-Ray   <a href="/product/6085b289c2c5ae17c4aefd66">Have a look</a> </div>
-    ),
-    asMessage: true,
-    end: true,
-  },
-  {
-    id: 'opm',
-    component: (
-      <div> His name is Saitama.He is from "ONE PUNCH MAN". PS we have it om Blu-Ray   <a href="/product/6085a472438e33313815dd72">Have a look</a> </div>
-    ),
-    asMessage: true,
-    end: true,
-  },
+  // {
+  //   id: 'p2',
+  //   options: [
+  //     { value: 1, label: 'No 😬!!', trigger: 'opm' },
+  //     { value: 2, label: 'Yeah I love that anime 😋 ', trigger: 'step-2' },
+  //   ],
+  // },
+  // {
+  //   id: 'step-2',
+  //   message: 'I can sugeest you more animes like that 😋',
+  //   trigger: 'step-3',
+  // },
+  // {
+  //   id: 'step-3',
+  //   options: [
+  //     { value: 1, label: 'Yeah. Please do 😅', trigger: 'Dbzs' },
+  //     { value: 2, label: 'I wanna try something new 😑', trigger: 'food' },
+  //   ],
+  // },
+  // {
+  //   id: 'Dbzs',
+  //   component: (
+  //     <div> Here is one. How the protagnist get god-like powers "Dragon Ball Z Super". PS we have it om Blu-Ray   <a href="/product/6085a666438e33313815dd74">Have a look</a> </div>
+  //   ),
+  //   asMessage: true,
+  //   end: true,
+  // },
+  // {
+    // id: 'food',
+  //   component: (
+  //     <div> How about anime on FOOD "Food Wars!". PS we have it om Blu-Ray   <a href="/product/6085b289c2c5ae17c4aefd66">Have a look</a> </div>
+  //   ),
+  //   asMessage: true,
+  //   end: true,
+  // },
+  // {
+  //   id: 'opm',
+  //   component: (
+  //     <div> His name is Saitama.He is from "ONE PUNCH MAN". PS we have it om Blu-Ray   <a href="/product/6085a472438e33313815dd72">Have a look</a> </div>
+  //   ),
+  //   asMessage: true,
+  //   end: true,
+  // },
   {
     id: 'my orders',
     component: (
